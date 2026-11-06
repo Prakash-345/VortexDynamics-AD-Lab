@@ -1,0 +1,93 @@
+# ==========================================
+# VortexDynamics AD Lab — Git Ignore Rules
+# Place this file in the repository root.
+# ==========================================
+
+# --- VMware virtual machine files ---
+# VM disks and snapshots can be very large.
+Virtual-Machines/**
+*.vmdk
+*.vdi
+*.vhd
+*.vhdx
+*.nvram
+*.vmem
+*.vmsd
+*.vmsn
+*.vmss
+*.vmxf
+*.vmx
+*.vmsf
+*.vmpl
+*.log
+*.lck/
+*.lock/
+
+# Keep the Virtual-Machines folder visible in Git if needed.
+!Virtual-Machines/.gitkeep
+
+# --- Installation media / ISO files ---
+# Do not commit operating-system installation media.
+ISO/**
+*.iso
+
+# Keep the ISO folder visible in Git if needed.
+!ISO/.gitkeep
+
+# --- Credentials, secrets and private configuration ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.cer
+*.crt
+*.kdb
+*.credentials
+secrets/
+credentials/
+private/
+
+# --- Windows temporary and system files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+
+# --- Logs, dumps and temporary files ---
+*.tmp
+*.temp
+*.bak
+*.old
+*.dmp
+*.hdmp
+*.etl
+*.trace
+*.log.*
+
+# --- Editor / IDE files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Operating system metadata ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Python artifacts (if scripts are added later) ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# --- Generated reports / exports ---
+*.html.tmp
+*.pdf.tmp
